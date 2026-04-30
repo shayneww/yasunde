@@ -95,16 +95,17 @@ export default function Timer({workTimeMinutes, breakTimeMinutes, isDarkMode} : 
     const formattedTime = `${String(minutesToShow).padStart(2, "0")}:${String(secondsToShow).padStart(2, "0")}`;
     
     return(
-        <div className={`flex flex-col items-center pt-4 select-none ${timerFontColor} font-light text-4xl`}>
-            <div className="flex justify-center">
-                <p className="flex items-center justify-center w-30 h-14 backdrop-blur-sm rounded-2xl bg-black/40">
+        <div className={`flex flex-col items-center justify-center min-h-screen pb-7 select-none ${timerFontColor} font-light text-4xl`}>
+            <p className="flex items-center justify-center w-30 h-14 backdrop-blur-sm rounded-2xl bg-black/40">
                 {formattedTime}
-                </p>
-            </div>
-            <div className = "flex items-center justify-center w-30 h-20 backdrop-blur-sm rounded-2xl bg-black/40 mt-3">
-                <img onClick={() => toggleTimer()} 
-                src={isTimer? `${buttonPausePath}` : `${buttonResumePath}`} 
-                className="w-15 h-15 mt select-none drag-none"/>
+            </p>
+
+            <div className="flex items-center justify-center w-30 h-20 backdrop-blur-sm rounded-2xl bg-black/40 mt-3">
+                <img 
+                    onClick={() => toggleTimer()} 
+                    src={isTimer ? buttonPausePath : buttonResumePath} 
+                    className="w-15 h-15 select-none"
+                />
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ export default function Titlebar({changeBackground, setDarkMode, isDarkMode} : T
     return(
         <div
             data-tauri-drag-region="true" 
-            className="flex h-8 w-full select-none items-center justify-between bg-black/40 px-4 backdrop-blur-sm "
+            className="flex h-8 w-full select-none items-center justify-between bg-black/40 px-4 backdrop-blur-sm"
         >
             <div className={`flex items-center gap-2 pointer-events-none ${yasundeFontColor} font-mono text-sm`}>
                 <div className="text-pink-400">~</div> / yasunde (1.0)
