@@ -11,7 +11,7 @@
   
   yasunde is a simple timer app that was designed for people who need help with controlling their screen time.<br>
   Because computers strain our eyes and long sessions might be harmful to your general posture and body health, it is recommended to have at least a 2-minute "stretch break" every 45 minutes of work in front of the screen.<br>
-  That's yasunde's main goal - to have a small 45-minute timer somewhere on your screen, with a pleasant background image.<br><br>
+  That's yasunde's main goal - to have a small timer somewhere on your screen, with a pleasant background image.<br><br>
 
   The app is also highly customizable. You can change your work time, background image, window size, enable dark mode, and many more with simple instructions listed in the sections below.
 </div>
@@ -47,7 +47,7 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) and the [Tauri 
 
 ## Configuration ⚙️
 
-Upon opening the app for the first time, yasunde folder and config.json file will be generated in your system's default app data folder (that would be AppData folder on Windows, Application Support on MacOS or .config on Linux). You can edit this file in any text editor to change how yasunde behaves. Here is an example of what the configuration looks like:
+Upon opening the app for the first time, yasunde folder and config.json file will be generated in your system's default app data folder (that would be `AppData` folder on Windows, `Application Support` on MacOS or `.config` on Linux). <br>You can edit this file in any text editor to change how yasunde behaves. Here is an example of what the configuration looks like:
 ```json
 {
   "backgroundPath": "/backgrounds/defaultbackground_wirestock.jpg",
@@ -72,9 +72,18 @@ Upon opening the app for the first time, yasunde folder and config.json file wil
 * `shuffleBackgrounds` (boolean): Set to `true` to randomly select one of the default backgrounds upon starting the app. Set to `false` otherwise.
 * `windowSize` (object): Set your preferred width and height in pixels. Note that very small resolutions may not display the layout correctly, so adjust carefully.
 
+> [!IMPORTANT]  
+> Please keep config.json in the correct JSON format. So set true/false for boolean values, use " " for strings, don't change key values etc. If something goes wrong with the format, yasunde will force the default one, which will overwrite your custom settings.
+
 Default backgrounds paths that you can use:<br>
     `"/backgrounds/defaultbackground_wirestock.jpg"`<br>
     `"/backgrounds/fieldsbackground_wirestock.jpg"`<br>
     `"/backgrounds/koibackground_wirestock.jpg"`<br>
     `"/backgrounds/osakabackground_wirestock.jpg"`<br>
     `"/backgrounds/sakurabackground_wirestock.jpg"`
+
+## User Tips 👍
+* If you just changed something in your `config.json`, you don't have to turn off and turn on yasunde. Simply hit `CTRL + R` to refresh.
+* Yellow dot on the toolbar lets you to hide yasunde for a moment, even if you have always on top setting turned on.
+* Green dot on the toolbar allows you to choose your background image by using your OS's dialog. It also immediately turns off the default backgrounds shuffle setting.
+* If you want, you can also use this app as a little pomodoro timer. However, features like gathering productivity stats etc. are not planned for yasunde!
