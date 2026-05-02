@@ -85,7 +85,7 @@ export default function App() {
   };
 
   /* This function runs once each time the app is started:
-  - it checks if "yasunde" (app's config folder) exists in AppData (or Application Support on Mac, .config on Linux)
+  - it checks if "yasunde" (app's config folder) exists in AppData (or Application Support on MacOS, .config on Linux)
   - if the "yasunde" folder doesn't exist, it creates one
   - it also checks if config.json exists - if it doesn't, it initializes it with default values (DEFAULT_CONFIG)
   - if config.json does exist, it reads its content and parses it
